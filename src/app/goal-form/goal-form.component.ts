@@ -13,7 +13,7 @@ export class GoalFormComponent implements OnInit {
 
   submitQuote(){
     this.addQuote.emit(this.newQuote);
-    // this.Quote.resetForm();
+    
       }
     
   constructor() { }

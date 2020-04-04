@@ -14,9 +14,7 @@ export class AliComponent implements OnInit {
 
   @Output() isComplete = new EventEmitter<boolean>();
 
-  // goalComplete(complete:boolean){
-  //   this.isComplete.emit(complete);
-  // }
+
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
