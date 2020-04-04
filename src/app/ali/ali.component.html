@@ -1,0 +1,16 @@
+<!-- {{ali.description}} -->
+<!-- {{ali.description}}
+<button (click)= 'goalComplete(true)'>Complete</button>
+
+<p>This goal will be complete in {{ali.completeDate|dateCount}} days</p> -->
+<p class="details">
+    Author: {{ali.author}} <br>
+    Posted by: {{ali.blogger}} 
+    </p>
+    <p>Posted {{ali.postingDate|dateCount}}</p>
+    <div class="like">
+      <p id="like" ><span (click)="countLikeclick()"><img class="logo" src="./assets/like.png"/></span> {{clickCounter}}</p>
+      <p id="dislike"><span (click)="countDislikeclick()"><img class="logo" src="./assets/dislike.png"/></span> {{clickCounter1}}</p>
+  
+    </div>
+   <button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete</button>

@@ -1,0 +1,83 @@
+<!-- <div>
+<ul>
+  <h1>My Goals</h1>
+
+<li *ngFor='let goal of goals'>
+
+
+{{goal.name}} 
+<app-ali [ali]='goals'></app-ali>
+
+
+</li>
+</ul>
+
+<p *ngIf = "goals.length >5,">your are more than enough</p>
+</div>  -->
+<!-- ################# -->
+<!-- <h1>My Goals</h1>
+<hr>
+<ul>
+  <div *ngFor='let goal of goals;let i = index'>
+    <li>{{goal.name}}</li>
+    <button (click)='toggleDetails(i)'>Toggle Details</button>
+    <app-ali *ngIf='goal.showDescription' [ali]='goal'></app-ali>
+  </div>
+</ul> -->
+<!-- ############## -->
+<!-- <h1>My Goals</h1>
+<hr>
+<ul>
+  <div *ngFor='let goal of goals;let i = index'> -->
+    <!-- <li appStrikethrough>{{goal.name}}</li> -->
+    <!-- <li appStrikethrough>{{goal.name}} due on {{goal.completeDate }}</li> 
+    <button (click)='toggleDetails(i)'>Toggle Details</button>
+    <app-ali *ngIf='goal.showDescription' [ali]='goal' (isComplete) = 'completeGoal($event,i)'></app-ali>
+    
+  </div>
+</ul> -->
+<!-- <div class="container">
+  <h1>MY GOALS</h1>
+  <hr>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div *ngFor='let goal of goals;let i = index'>
+        <div> -->
+          <!-- <h6 id={{i}} appStrikethrough>{{goal.name}} due on {{goal.completeDate|date|uppercase}}</h6> -->
+          <!-- <button (click)='toggleDetails(i)' class="btn btn-primary">Toggle Details</button>
+        </div>
+
+        <div *ngIf='goal.showDescription'>
+          <app-ali  []='goal' (isComplete) = 'deleteGoal($event,i)'></app-ali>
+        </div> -->
+      <!-- </div>
+    </div>
+    <div class="col-md-6">
+      <app-goal-form></app-goal-form>
+    </div>
+  </div>
+  <p *ngIf='goals.length > 5'>You have too many goals</p>
+</div> -->
+<div class="container-fluid">
+  <div class="main">
+    <div class="heading">
+      <h1>Quote of the Day</h1>
+    </div>
+    <hr>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor='let quote of goals; let i=index'>
+          <div class="quote" >
+              <h4 id={{i}} appHighlight>{{quote.name}}</h4> 
+              <app-ali *ngIf='quote.showDescription' [ali]='quote' (isComplete) = 'deleteQuote($event,i)'></app-ali>
+              <button (click)='toggleDetails(i)' class="btn btn-primary">Details</button>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <app-goal-form (addQuote)="addNewQuote($event)"></app-goal-form>
+      </div>
+    </div>  
+  </div> 
+</div>
