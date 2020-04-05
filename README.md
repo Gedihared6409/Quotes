@@ -3,7 +3,7 @@
 ### By ALI HARED
 
 ## Description
-This is a simple Angular  application that allows you to create quotes which allows one to add, upvote, downvote or delete a quote.
+A web application for a quotes, that will help people get inspiration and also inspire others through adding their own quotes. Users can also be able to upvote or downvote the quotes and the quote with the highest upvote will be highlighted.
 
 ## User Requirements
 The applications allows users to do the following:
@@ -45,6 +45,8 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 + HTML 
 + CSS
 + bootstrap
+
+
 
 ## Contributions 
 Pull requests are encouraged

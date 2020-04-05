@@ -16,16 +16,16 @@ export class AppComponent {
     new Detail(5,'“Virtually nothing is impossible in this world if you just put your mind to it and maintain a positive attitude.”', 'Lou Holtz', "Ali",new Date(2020,2,4),0,0),
     new Detail(6,'“The way I see it, if you want the rainbow, you gotta put up with the rain.”', 'Dolly Parton', "Ali",new Date(2020,3,30),0,0),
   ];
-  addNewQuote(quote){
+  addNewQuote(Detail){
     let quoteLength = this.goals.length;
-  quote.id = quoteLength+1;
-    quote.postingDate= new Date()
+  Detail.id = quoteLength+1;
+    Detail.postingDate= new Date()
     
-    if (quote.author === ''|| quote.author === '' || quote.blogger === ''){
+    if (Detail.author === ''|| Detail.author === '' || Detail.blogger === ''){
       alert('all fields are required!')
     }else{
       alert('Your Quote has been added Successfully')
-    this.goals.push(quote);
+    this.goals.push(Detail);
     
   }
   }
